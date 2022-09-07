@@ -1,0 +1,81 @@
+.NavBrand {
+  width: 100px;
+  height: 55px;
+}
+#navDropdown {
+  border: 1px solid gray;
+  padding: 3px;
+  font-size: .8em;
+}
+.dropdown-menu, .budka-main {
+  background-color: #221f1f!important;
+}
+.dropdown-item {
+  color: white!important;
+}
+a {
+  text-decoration: none;
+}
+svg {
+  font-size:1.3rem;
+}
+.budka-img {
+  transition: transform 0.2s;
+}
+.budka-img:hover {
+  transform: scale(1.1);
+}
+
+.budka-nav {
+  background-color: #221f1f!important;
+}
+.budka-footer a {
+  color: #838383!important;
+}
+.budka-footer .budka-copyright {
+  color: #838383!important;
+  text-align: left;
+}
+.budka-button {
+  border: 1px solid #838383;
+}
+@media screen and (max-width: 991px) {
+  .budka-img {
+    width: 300px !important;
+    height: 500px !important;
+  }
+}
+@media screen and (min-width: 992px){
+.budka-img{
+width: 400px !important;
+height: 200px !important;
+}
+}
+.budka-saga::-webkit-scrollbar {
+  display: none;
+}
+.budka-button {
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+}
+.budka-button-main {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+}
+.budka-button-eye {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+}
+.budka-button-eye:hover {
+  color: #221f1f;
+}
+.budka-eye {
+  font-size: 3rem;
+  position: relative;
+  bottom: 50px
+}

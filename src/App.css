@@ -79,3 +79,29 @@ height: 200px !important;
   position: relative;
   bottom: 50px
 }
+.budka-list-group {
+  background-color: #221f1f!important;
+}
+.list-group-item {
+  background-color: #221f1f!important;
+  color: white;
+  border: none;
+}
+.list-group {
+  width: 100%;
+}
+.b-add-comment {
+  background-color: transparent!important;
+  border: none;
+}
+.b-border-none {
+  border: none!important;
+}
+
+textarea:hover, input:hover, textarea:active, input:active, textarea:focus, input:focus {
+  outline:0px !important;
+}
+.budka-comments {
+  max-height: 525px;
+  overflow: auto;
+}

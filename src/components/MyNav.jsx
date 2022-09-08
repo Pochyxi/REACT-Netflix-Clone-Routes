@@ -37,7 +37,7 @@ class MyNav extends Component {
                 </Navbar>
                 <Navbar className="budka-nav" bg="dark">
                     <Container className="justify-content-between" fluid>
-                        <Navbar.Brand className="d-flex align-items-center w-50" href="#home">
+                        <Navbar className="d-flex align-items-center w-50" href="#home">
                             <h2 className='text-light'>TV Shows</h2>
                             <NavDropdown id="navDropdown" className="text-light bg-dark ms-4" title="Genres">
                                 <NavDropdown.Item href="#action/3.1">Comedy</NavDropdown.Item>
@@ -46,7 +46,7 @@ class MyNav extends Component {
                                 </NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.3">Thriller</NavDropdown.Item>
                             </NavDropdown>
-                        </Navbar.Brand>
+                        </Navbar>
                         <Nav className="flex-row justify-content-evenly">
                             <Nav.Link className="text-light" href="#search"><GridFill /></Nav.Link>
                             <Nav.Link className="text-light" href="#memes">

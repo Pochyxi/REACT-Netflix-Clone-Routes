@@ -17,7 +17,7 @@ class MyMain extends Component {
     async fetchSaga(first, second, complete) {
         try {
             let response = await fetch(
-                `http://www.omdbapi.com/?apikey=${this.state.key}&s=${first}%20${second}`);
+                `https://www.omdbapi.com/?apikey=${this.state.key}&s=${first}%20${second}`);
             if (response.ok) {
                 let data = await response.json();
                 console.log(data.Search);

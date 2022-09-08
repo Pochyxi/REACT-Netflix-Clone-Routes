@@ -42,6 +42,7 @@ class MovieDetails extends Component {
                     },
                     buttonSendToggle: false,
                 })
+                this.getComments();
 
                 console.log('Comment was sent!')
             } else {
@@ -73,6 +74,14 @@ class MovieDetails extends Component {
         } catch (err) {
             console.log(err);
         }
+    }
+    setVote = (e) => {
+        this.setState({
+            formValues: {
+                ...this.state.formValues,
+                rate: parseInt(e.target.textContent)
+            }
+        })
     }
     getSingleMovie = async () => {
         try {
@@ -182,19 +191,27 @@ class MovieDetails extends Component {
                                                             as={'textarea'}
                                                             placeholder='Add comment here'
                                                             value={this.state.formValues.comment}
-                                                            onChange={(e) => this.setState({ formValues: { ...this.state.formValues, comment: e.target.value } })}>
-
+                                                            onChange={(e) => this.setState({ formValues: { ...this.state.formValues, comment: e.target.value } })}
+                                                        >
                                                         </Form.Control>
                                                         <div className='b-riga'></div>
                                                     </Form.Group>
-                                                    <Row className='w-100 m-0'>
-                                                        {
-                                                            this.state.buttonSendToggle && (
-                                                                <Button className='p-0 text-center w-25 ms-auto mt-2 bg-dark' type='submit'>Send</Button>
-                                                            )
-                                                        }
 
-                                                    </Row>
+                                                    {
+                                                        this.state.buttonSendToggle && (
+                                                            <Row className='w-100 m-0 flex-nowrap align-items-end '>
+                                                                <p className='d-inline w-25 m-0 p-0 text-baseline'>vota</p>
+                                                                <Button onClick={this.setVote} className='budka-vote'>1</Button>
+                                                                <Button onClick={this.setVote} className='budka-vote'>2</Button>
+                                                                <Button onClick={this.setVote} className='budka-vote'>3</Button>
+                                                                <Button onClick={this.setVote} className='budka-vote'>4</Button>
+                                                                <Button onClick={this.setVote} className='budka-vote'>5</Button>
+                                                                <Button className='p-0 text-center w-25 ms-auto mt-2 bg-dark' type='submit'>Send</Button>
+                                                            </Row>
+                                                        )
+                                                    }
+
+
                                                 </form>
                                             </ListGroup.Item>
                                             {
@@ -209,7 +226,6 @@ class MovieDetails extends Component {
                                                         <ListGroup.Item className='text-start p-0 pb-5' >
                                                             {comment.comment}
                                                         </ListGroup.Item>
-
                                                     </Container>
                                                 ))
                                             }

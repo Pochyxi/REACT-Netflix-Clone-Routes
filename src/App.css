@@ -102,6 +102,13 @@ textarea:hover, input:hover, textarea:active, input:active, textarea:focus, inpu
   outline:0px !important;
 }
 .budka-comments {
-  max-height: 525px;
+  max-height: 420px!important;
   overflow: auto;
+}
+.budka-vote {
+  width: 5%;
+  padding: 0;
+  border-radius: 50%;
+  font-size: .7rem;
+  margin-right: 5px;
 }

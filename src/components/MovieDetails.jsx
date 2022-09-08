@@ -85,7 +85,7 @@ class MovieDetails extends Component {
     }
     getSingleMovie = async () => {
         try {
-            const res = await fetch(`http://www.omdbapi.com/?apikey=${this.state.apiKey}&i=${this.props.params.movieId}`)
+            const res = await fetch(`https://www.omdbapi.com/?apikey=${this.state.apiKey}&i=${this.props.params.movieId}`)
             if (res.ok) {
                 const data = await res.json()
                 this.setState({
